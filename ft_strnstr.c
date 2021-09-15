@@ -13,7 +13,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		i = 0;
 		while (i < len)
 		{
-			if (little_len + i >= len)
+			if (little_len + i > len)
 				break ;
 			if (ft_strncmp((big + i), (little), little_len) == 0)
 				return ((char *)(big + i));
