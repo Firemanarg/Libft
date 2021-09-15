@@ -9,7 +9,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	uns_chr1 = (unsigned char *) s1;
 	uns_chr2 = (unsigned char *) s2;
 	i = 0;
-	while ((*(uns_chr1 + i) || *(uns_chr2 + i)) && (i < n))
+	while (i < n)
 	{
 		if (*(uns_chr1 + i) != *(uns_chr2 + i))
 			return (*(uns_chr1 + i) - *(uns_chr2 + i));
