@@ -13,4 +13,5 @@ void	ft_putendl_fd(char *s, int fd)
 	*(newstr + len) = '\n';
 	*(newstr + len + 1) = '\0';
 	ft_putstr_fd(newstr, fd);
+	free(newstr);
 }
