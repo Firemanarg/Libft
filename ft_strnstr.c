@@ -7,7 +7,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	if (*little == '\0')
 		return ((char *) big);
-	else if (len > 0 && big)
+	else if (len > 0 && *big)
 	{
 		little_len = ft_strlen(little);
 		i = 0;
