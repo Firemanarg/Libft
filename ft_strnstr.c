@@ -11,8 +11,9 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	{
 		little_len = ft_strlen(little);
 		i = 0;
-		while (i < len)
+		while (i < len && i < little_len)
 		{
+
 			if (ft_strncmp((big + i), (little), little_len) == 0)
 				return ((char *)(big + i));
 			i += 1;
