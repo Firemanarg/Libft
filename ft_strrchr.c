@@ -2,16 +2,18 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char	*last;
+	char			*last;
+	unsigned char	cc;
 
-	last = NULL;
+	cc = c;
+	last = (void *) 0;
 	while (*s != '\0')
 	{
-		if (*s == c)
+		if (*s == cc)
 			last = (char *) s;
 		s++;
 	}
-	if (c == '\0')
+	if (cc == '\0')
 		last = (char *) s;
 	return (last);
 }
