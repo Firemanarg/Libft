@@ -3,11 +3,9 @@
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	little_len;
-	size_t	big_len;
 	size_t	i;
 
-	big_len = ft_strlen(big);
-	if (len <= big_len && len > 0)
+	if (len <= big_len)
 	{
 		if (*little == '\0')
 			return ((char *) big);
