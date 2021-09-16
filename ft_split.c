@@ -8,7 +8,7 @@ static char	**ft_freeall(char **array, size_t i)
 		i -= 1;
 	}
 	free(array);
-	return (NULL);
+	return ((void *) 0);
 }
 
 static size_t	ft_skip_separators(char const *s, char c, size_t i)
@@ -26,7 +26,7 @@ static size_t	ft_countchr(char const *s, char c)
 	size_t	i;
 
 	last_is_sep = 1;
-	count = 0;
+	count = 1;
 	i = 0;
 	while (*(s + i) != '\0')
 	{
@@ -68,11 +68,11 @@ char	**ft_split(char const *s, char c)
 		while (*(s + end) != c && *(s + end) != '\0')
 			end += 1;
 		*(array + curr_str) = ft_substr(s, start, end - start);
-		if (*(array + curr_str) == NULL)
+		if (!*(array + curr_str))
 			return (ft_freeall(array, curr_str));
 		start = end;
 		curr_str += 1;
 	}
-	*(array + elm_count) = NULL;
+	*(array + elm_count) = (void *) 0;
 	return (array);
 }
