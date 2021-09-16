@@ -2,11 +2,12 @@
 
 static char	**ft_freeall(char **array, size_t i)
 {
-	while (i >= 0)
+	while (i > 0)
 	{
 		free(*(array + i));
 		i -= 1;
 	}
+	free(*array);
 	free(array);
 	return ((void *) 0);
 }
