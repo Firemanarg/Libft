@@ -26,7 +26,7 @@ static size_t	ft_countchr(char const *s, char c)
 	size_t	i;
 
 	last_is_sep = 1;
-	count = 1;
+	count = 0;
 	i = 0;
 	while (*(s + i) != '\0')
 	{
