@@ -9,7 +9,7 @@ static size_t	ft_find_start(char const *s1, char const *set)
 	s1_len = ft_strlen(s1);
 	while (i < s1_len)
 	{
-		if (ft_strchr(set, *(s1 + i)) == NULL)
+		if (!ft_strchr(set, *(s1 + i)))
 			return (i);
 		i += 1;
 	}
@@ -21,9 +21,9 @@ static size_t	ft_find_end(char const *s1, char const *set)
 	size_t	i;
 
 	i = ft_strlen(s1) - 1;
-	while (i >= 0)
+	while (i > 0)
 	{
-		if (ft_strchr(set, *(s1 + i)) == NULL)
+		if (!ft_strchr(set, *(s1 + i)))
 			return (i);
 		i -= 1;
 	}
@@ -39,9 +39,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	start = ft_find_start(s1, set);
 	end = ft_find_end(s1, set);
 	if (start == end)
-		return (NULL);
+		return (ft_strdup(""));
 	newstr = ft_substr(s1, start, (end - start) + 1);
 	if (!newstr)
-		return (NULL);
+		return ((void *) 0);
 	return (newstr);
 }
