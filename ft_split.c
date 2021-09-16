@@ -81,7 +81,7 @@ static char	**ft_generate_array(char const *s, char c, size_t elm_count)
 char	**ft_split(char const *s, char c)
 {
 	char	**array;
-	size_t	elm_count
+	size_t	elm_count;
 
 	if (c == '\0')
 	{
