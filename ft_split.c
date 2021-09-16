@@ -83,7 +83,12 @@ char	**ft_split(char const *s, char c)
 	char	**array;
 	size_t	elm_count;
 
-	if (c == '\0')
+	if (!*s)
+	{
+		array = ft_calloc(1, sizeof(char *));
+		elm_count = 0;
+	}
+	else if (c == '\0')
 	{
 		array = ft_calloc(2, sizeof(char *));
 		*array = ft_strdup(s);
