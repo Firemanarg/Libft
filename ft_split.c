@@ -1,6 +1,6 @@
 #include "libft.h"
 
-static char	**ft_freeall(char **array, size_t i)
+static void ft_freeall(char **array, size_t i)
 {
 	while (i > 0)
 	{
@@ -9,7 +9,6 @@ static char	**ft_freeall(char **array, size_t i)
 	}
 	free(*array);
 	free(array);
-	return ((void *) 0);
 }
 
 static size_t	ft_skip_separators(char const *s, char c, size_t i)
@@ -49,15 +48,13 @@ static size_t	ft_countchr(char const *s, char c)
 	return (count);
 }
 
-char	**ft_split(char const *s, char c)
+static char	**ft_generate_array(char const *s, char c, size_t elm_count)
 {
-	size_t	elm_count;
 	char	**array;
 	size_t	curr_str;
 	size_t	start;
 	size_t	end;
 
-	elm_count = ft_countchr(s, c);
 	array = ft_calloc(elm_count + 1, sizeof(char *));
 	curr_str = 0;
 	start = 0;
@@ -70,9 +67,32 @@ char	**ft_split(char const *s, char c)
 			end += 1;
 		*(array + curr_str) = ft_substr(s, start, end - start);
 		if (!*(array + curr_str))
-			return (ft_freeall(array, curr_str));
+		{
+			ft_freeall(array, curr_str);
+			return ((void *) 0);
+		}
 		start = end;
 		curr_str += 1;
+	}
+	*(array + elm_count) = (void *) 0;
+	return (array);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**array;
+	size_t	elm_count
+
+	if (c == '\0')
+	{
+		array = ft_calloc(2, sizeof(char *));
+		*array = ft_strdup(s);
+		elm_count = 1;
+	}
+	else
+	{
+		elm_count = ft_countchr(s, c);
+		array = ft_generate_array(s, c, elm_count);
 	}
 	*(array + elm_count) = (void *) 0;
 	return (array);
