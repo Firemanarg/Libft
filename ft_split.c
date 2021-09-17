@@ -1,6 +1,6 @@
 #include "libft.h"
 
-static void ft_freeall(char **array, size_t i)
+static char	*ft_freeall(char **array, size_t i)
 {
 	while (i > 0)
 	{
@@ -9,6 +9,7 @@ static void ft_freeall(char **array, size_t i)
 	}
 	free(*array);
 	free(array);
+	return ((void *) 0);
 }
 
 static size_t	ft_skip_separators(char const *s, char c, size_t i)
@@ -67,10 +68,7 @@ static char	**ft_generate_array(char const *s, char c, size_t elm_count)
 			end += 1;
 		*(array + curr_str) = ft_substr(s, start, end - start);
 		if (!*(array + curr_str))
-		{
-			ft_freeall(array, curr_str);
-			return ((void *) 0);
-		}
+			return (ft_freeall(array, curr_str));
 		start = end;
 		curr_str += 1;
 	}
