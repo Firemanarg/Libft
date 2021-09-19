@@ -6,7 +6,7 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:14:11 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/19 11:14:12 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/19 11:56:17 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char	*b_value_src;
 
 	i = 0;
+	if (!dest && !src)
+		return (NULL);
 	while (i < n)
 	{
 		b_value_dest = (unsigned char *)(dest + i);

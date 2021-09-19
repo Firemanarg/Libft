@@ -6,7 +6,7 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:14:09 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/19 11:14:09 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/19 11:57:07 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	unsigned char	*b_value_dest;
 	unsigned char	*b_value_src;
 
+	if (!dest && !src)
+		return (NULL);
 	if ((dest >= src) && (dest <= (src + (n - 1))))
 	{
 		i = 0;
