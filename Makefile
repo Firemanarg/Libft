@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2021/09/19 11:12:35 by lsilva-q          #+#    #+#              #
+#    Updated: 2021/09/19 11:12:40 by lsilva-q         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME	=	libft.a
 
 CC		=	gcc
@@ -39,5 +51,7 @@ fclean: clean
 	rm -rf $(NAME)
 
 re: fclean all
+
+rebonus: fclean bonus
 
 .PHONY: all clean fclean re bonus
