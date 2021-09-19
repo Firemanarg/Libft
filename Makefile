@@ -6,7 +6,7 @@
 #    By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/19 11:12:35 by lsilva-q          #+#    #+#              #
-#    Updated: 2021/09/19 11:12:40 by lsilva-q         ###   ########.fr        #
+#    Updated: 2021/09/19 11:31:45 by lsilva-q         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,4 +54,4 @@ re: fclean all
 
 rebonus: fclean bonus
 
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re bonus rebonus
