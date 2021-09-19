@@ -6,7 +6,7 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:13:15 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/19 11:13:15 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/19 11:36:30 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,5 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 			i += 1;
 		}
 	}
-	return ((void *) 0);
+	return (NULL);
 }

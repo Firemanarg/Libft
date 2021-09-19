@@ -6,7 +6,7 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:13:49 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/19 11:13:50 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/19 11:36:14 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ char	*ft_strchr(const char *s, int c)
 	}
 	if (cc == '\0')
 		return ((char *) s);
-	return ((void *) 0);
+	return (NULL);
 }

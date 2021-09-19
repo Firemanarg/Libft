@@ -6,7 +6,7 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:13:04 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/19 11:13:05 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/19 11:36:36 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		subs_len = s_len - start;
 	subs = ft_calloc(subs_len + 1, sizeof(char));
 	if (!subs)
-		return ((void *) 0);
+		return (NULL);
 	ft_strlcpy(subs, (s + start), subs_len + 1);
 	return (subs);
 }

@@ -6,7 +6,7 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:13:11 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/19 11:13:12 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/19 11:36:31 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strrchr(const char *s, int c)
 	unsigned char	cc;
 
 	cc = c;
-	last = (void *) 0;
+	last = NULL;
 	while (*s != '\0')
 	{
 		if (*s == cc)

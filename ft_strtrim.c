@@ -6,7 +6,7 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:13:07 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/19 11:13:08 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/19 11:36:34 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (ft_strdup(""));
 	newstr = ft_substr(s1, start, (end - start) + 1);
 	if (!newstr)
-		return ((void *) 0);
+		return (NULL);
 	return (newstr);
 }

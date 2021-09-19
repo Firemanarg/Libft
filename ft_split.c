@@ -6,7 +6,7 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:13:52 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/19 11:13:53 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/19 11:37:03 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static char	*ft_freeall(char **array, size_t i)
 	}
 	free(*array);
 	free(array);
-	return ((void *) 0);
+	return (NULL);
 }
 
 static size_t	ft_skip_separators(char const *s, char c, size_t i)
@@ -84,7 +84,7 @@ static char	**ft_generate_array(char const *s, char c, size_t elm_count)
 		start = end;
 		curr_str += 1;
 	}
-	*(array + elm_count) = (void *) 0;
+	*(array + elm_count) = NULL;
 	return (array);
 }
 
@@ -109,6 +109,6 @@ char	**ft_split(char const *s, char c)
 		elm_count = ft_countchr(s, c);
 		array = ft_generate_array(s, c, elm_count);
 	}
-	*(array + elm_count) = (void *) 0;
+	*(array + elm_count) = NULL;
 	return (array);
 }
