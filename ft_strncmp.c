@@ -6,7 +6,7 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:13:20 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/19 12:12:08 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/19 12:12:58 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	return (ft_memcmp(s1, s2, n - 1));
+	return (ft_memcmp(s1, s2, n));
 }
