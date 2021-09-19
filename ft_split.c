@@ -6,13 +6,13 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:13:52 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/19 11:37:03 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/19 11:59:19 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_freeall(char **array, size_t i)
+static char	**ft_freeall(char **array, size_t i)
 {
 	while (i > 0)
 	{
