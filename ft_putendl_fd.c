@@ -6,7 +6,7 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:14:01 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/20 08:47:22 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/20 08:53:36 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,4 @@ void	ft_putendl_fd(char *s, int fd)
 		ft_putstr_fd(newstr, fd);
 		free(newstr);
 	}
-	return (NULL);
 }
