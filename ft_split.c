@@ -6,7 +6,7 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:13:52 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/19 22:01:23 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/19 22:02:09 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,9 +108,9 @@ char	**ft_split(char const *s, char c)
 	{
 		elm_count = ft_countchr(s, c);
 		array = ft_generate_array(s, c, elm_count);
-		if (!array)
-			return (NULL);
 	}
+	if (!array)
+		return (NULL);
 	*(array + elm_count) = NULL;
 	return (array);
 }
