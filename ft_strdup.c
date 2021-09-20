@@ -6,7 +6,7 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:13:47 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/20 08:58:53 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/20 09:00:57 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ char	*ft_strdup(const char *s)
 		ft_strlcpy(new_str, s, len + 1);
 		return (new_str);
 	}
-	return (NULL);
+	return (ft_calloc(1, sizeof(char)));
 }
