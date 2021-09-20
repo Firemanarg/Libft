@@ -6,7 +6,7 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:13:59 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/19 11:13:59 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/20 08:51:38 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@ void	ft_putnbr_fd(int n, int fd)
 	char	*nbr;
 
 	nbr = ft_itoa(n);
-	ft_putstr_fd(nbr, fd);
-	free(nbr);
+	if (nbr)
+	{
+		ft_putstr_fd(nbr, fd);
+		free(nbr);
+	}
 }

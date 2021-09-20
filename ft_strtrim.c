@@ -6,7 +6,7 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:13:07 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/19 11:36:34 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/20 08:44:06 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,12 +48,16 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	end;
 	char	*newstr;
 
-	start = ft_find_start(s1, set);
-	end = ft_find_end(s1, set);
-	if (start == end)
-		return (ft_strdup(""));
-	newstr = ft_substr(s1, start, (end - start) + 1);
-	if (!newstr)
-		return (NULL);
-	return (newstr);
+	if (s1)
+	{
+		start = ft_find_start(s1, set);
+		end = ft_find_end(s1, set);
+		if (start == end)
+			return (ft_strdup(""));
+		newstr = ft_substr(s1, start, (end - start) + 1);
+		if (!newstr)
+			return (NULL);
+		return (newstr);
+	}
+	return (NULL);
 }
