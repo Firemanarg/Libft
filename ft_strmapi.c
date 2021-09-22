@@ -6,7 +6,7 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:13:24 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/20 08:58:11 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/22 16:14:41 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,18 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*newstr;
 	unsigned int	i;
 
-	newstr = ft_strdup(s);
-	if (!newstr)
-		return (NULL);
-	i = 0;
-	while (*(newstr + i) != '\0')
+	if (s)
 	{
-		*(newstr + i) = f(i, *(newstr + i));
-		i += 1;
+		newstr = ft_strdup(s);
+		if (!newstr)
+			return (NULL);
+		i = 0;
+		while (*(newstr + i) != '\0')
+		{
+			*(newstr + i) = f(i, *(newstr + i));
+			i += 1;
+		}
+		return (newstr);
 	}
-	return (newstr);
+	return (NULL);
 }
