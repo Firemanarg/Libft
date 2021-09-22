@@ -6,11 +6,12 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:13:52 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/22 15:17:28 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/22 15:18:36 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 char	**ft_split(char const *s, char c)
 {
 	return (NULL);
