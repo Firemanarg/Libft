@@ -6,7 +6,7 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:14:39 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/22 13:18:56 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/22 13:22:31 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ char	*ft_itoa(int n)
 	}
 	else
 		nbr = n;
-	while (nbr > 0 || len >= 0)
+	while (nbr > 0)
 	{
 		str[len] = (nbr % 10) + '0';
 		nbr /= 10;
