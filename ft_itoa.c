@@ -6,54 +6,11 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:14:39 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/22 13:26:18 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/22 13:28:08 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static long int	ft_digits_len(int n)
-{
-	int					len;
-
-	len = 0;
-	if (n <= 0)
-		len = 1;
-	while (n != 0)
-	{
-		len++;
-		n = n / 10;
-	}
-	return (len);
-}
-
-char	*ft_itoa(int n)
-{
-	char				*result;
-	long int			len;
-	unsigned int		number;
-
-	len = ft_digits_len(n);
-	result = (char *)malloc(sizeof(char) * (len + 1));
-	if (!result)
-		return (NULL);
-	result[len--] = '\0';
-	if (n == 0)
-		result[0] = '0';
-	if (n < 0)
-	{
-		number = n * -1;
-		result[0] = '-';
-	}
-	else
-		number = n;
-	while (number > 0)
-	{
-		result[len--] = 48 + (number % 10);
-		number = number / 10;
-	}
-	return (result);
-}
 
 /*
 **	Function name:
@@ -65,7 +22,7 @@ char	*ft_itoa(int n)
 **	Return:
 **		> (int). Return the amount of digits in number n
 */
-/*
+
 static int	ft_count_digits(int n)
 {
 	int	len;
@@ -83,7 +40,7 @@ static int	ft_count_digits(int n)
 
 char	*ft_itoa(int n)
 {
-	int				len;
+	long int		len;
 	unsigned int	nbr;
 	char			*str;
 
@@ -109,7 +66,7 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
-*/
+
 /*
 static int	ft_get_signal(int n)
 {
