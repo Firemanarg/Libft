@@ -6,7 +6,7 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:13:59 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/22 14:11:11 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/22 14:12:22 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void	ft_putnbr_rec(unsigned int n, int fd)
 	ncpy = n;
 	while (n / 10 != 0)
 		n /= 10;
-	write(fd, &('0' + n), 1);
+	write(fd, ('0' + n), 1);
 	if (n != 0)
 		ft_putnbr_rec(ncpy / 10, fd);
 }
