@@ -6,13 +6,44 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:13:52 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/19 22:02:09 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/20 09:59:09 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	**ft_freeall(char **array, size_t i)
+char	**ft_split(char const *s, char c)
+{
+	size_t	count;
+	char	**array;
+	char	*ptr;
+	char	*last_found;
+
+	if (!s)
+		return (NULL);
+	ptr = s;
+	count = 0;
+	while (*ptr != '\0')
+	{
+		while (*ptr == c)
+			ptr++;
+		count += 1;
+		ptr++;
+	}
+	array = ft_calloc(count + 1, typeof(char *));
+	if (!array)
+		return (NULL);
+	ptr = s;
+	while (*ptr != '\0')
+	{
+		while (*ptr == c)
+			ptr++;
+		count += 1;
+		ptr++;
+	}
+}
+
+/*static char	**ft_freeall(char **array, size_t i)
 {
 	while (i > 0)
 	{
@@ -114,3 +145,4 @@ char	**ft_split(char const *s, char c)
 	*(array + elm_count) = NULL;
 	return (array);
 }
+*/
