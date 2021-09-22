@@ -6,7 +6,7 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:13:44 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/19 11:13:44 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/22 16:12:29 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,13 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
 
-	i = 0;
-	while (*(s + i) != '\0')
+	if (s)
 	{
-		f(i, (s + i));
-		i += 1;
+		i = 0;
+		while (*(s + i) != '\0')
+		{
+			f(i, (s + i));
+			i += 1;
+		}
 	}
 }
