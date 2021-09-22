@@ -6,7 +6,7 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:14:39 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/22 13:22:31 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/22 13:23:39 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char	*ft_itoa(int n)
 	unsigned int	nbr;
 	char			*str;
 
-	len = ft_count_digits(nbr);
+	len = ft_count_digits(n);
 	str = ft_calloc(len + 1, sizeof(char));
 	if (!str)
 		return (NULL);
