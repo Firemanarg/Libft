@@ -6,13 +6,13 @@
 #    By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/19 11:12:35 by lsilva-q          #+#    #+#              #
-#    Updated: 2021/09/19 11:31:45 by lsilva-q         ###   ########.fr        #
+#    Updated: 2021/09/22 16:34:17 by lsilva-q         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	libft.a
 
-CC		=	gcc
+CC		=	clang
 CFLAGS	=	-Wall -Werror -Wextra
 AR		=	ar rcs
 SRCS	=	ft_isalpha.c	ft_isdigit.c	ft_isalnum.c	ft_isascii.c	\
