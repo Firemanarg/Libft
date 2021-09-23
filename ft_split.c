@@ -6,7 +6,7 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:13:52 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/22 15:18:36 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/23 11:09:14 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,8 @@ char	**ft_split(char const *s, char c)
 	}
 }
 */
-/*static char	**ft_freeall(char **array, size_t i)
+/*
+static char	**ft_freeall(char **array, size_t i)
 {
 	while (i > 0)
 	{
@@ -138,7 +139,7 @@ char	**ft_split(char const *s, char c)
 	else if (c == '\0')
 	{
 		array = ft_calloc(2, sizeof(char *));
-		*array = ft_strdup(s);
+		array[0] = ft_strdup(s);
 		elm_count = 1;
 	}
 	else
