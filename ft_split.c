@@ -6,15 +6,119 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:13:52 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/23 11:09:14 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/23 15:59:29 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static size_t	str_quantity(char const *str, char del);
+static void		complement_split(char const *s, char c, char **arr);
+
 char	**ft_split(char const *s, char c)
 {
-	return (NULL);
+	char	**arr;
+
+	if (!s)
+		return (NULL);
+	arr = ft_calloc(str_quantity(s, c) + 1, sizeof(char *));
+	if (!arr)
+		return (NULL);
+	complement_split(s, c, arr);
+	return (arr);
+}
+
+static void	complement_split(char const *s, char c, char **arr)
+{
+	size_t	cont;
+	size_t	cchr;
+	size_t	carr;
+
+	cont = 0;
+	carr = -1;
+	while (s[cont] != '\0')
+	{
+		if (s[cont] == c)
+			cont++;
+		else
+		{
+			cchr = 0;
+			while (s[cont] != c && s[cont] != '\0')
+			{
+				cont++;
+				cchr++;
+			}
+			arr[++carr] = ft_calloc(cchr + 1, sizeof(char));
+			ft_strlcpy(arr[carr], &s[cont - cchr], cchr + 1);
+		}
+	}
+}
+
+static size_t	word_count(char const *s, char c)
+{
+	size_t	i;
+	size_t	count;
+
+	i = 0;
+	count = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] != c)
+		{
+			while (s[i] != c && s[i] != '\0')
+				i += 1;
+			count += 1;
+		}
+		else
+			i += 1;
+	}
+	return (count);
+}
+
+static char	**fill_array(char const *s, char c, char **array)
+{
+	size_t	i;
+	size_t	cchr;
+	size_t	carr;
+
+	i = 0;
+	carr = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] == c)
+			i++;
+		else
+		{
+			cchr = 0;
+			while (s[i] != c && s[i] != '\0')
+			{
+				i++;
+				cchr++;
+			}
+			arr[carr] = ft_calloc(cchr + 1, sizeof(char));
+			ft_strlcpy(arr[carr], &s[i - cchr], cchr + 1);
+			carr += 1;
+		}
+	}
+	// Pendente -> Finalizar implementaçao desta função;
+	//					Preencher o array com os valores. Utilizar substr pra
+	//					obter os valores
+	while (s[i] != '\0')
+	{
+
+	}
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**array;
+
+	if (!s)
+		return (NULL);
+	array = ft_calloc(word_count(s, c) + 1, sizeof(char *));
+	if (!array)
+		return (NULL);
+
 }
 
 /*
