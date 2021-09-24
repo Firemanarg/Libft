@@ -6,7 +6,7 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:13:11 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/19 11:36:31 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/24 13:33:55 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,18 @@ char	*ft_strrchr(const char *s, int c)
 {
 	char			*last;
 	unsigned char	cc;
+	char			*cs;
 
 	cc = c;
 	last = NULL;
-	while (*s != '\0')
+	cs = (char *) s;
+	while (*cs != '\0')
 	{
-		if (*s == cc)
-			last = (char *) s;
+		if (*cs == cc)
+			last = cs;
 		s++;
 	}
 	if (cc == '\0')
-		last = (char *) s;
+		last = cs;
 	return (last);
 }

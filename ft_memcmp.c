@@ -6,7 +6,7 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:14:14 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/19 11:14:14 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/24 13:11:50 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if (*(uns_chr1 + i) != *(uns_chr2 + i))
-			return (*(uns_chr1 + i) - *(uns_chr2 + i));
+		if (uns_chr1[i] != uns_chr2[i])
+			return (uns_chr1[i] - uns_chr2[i]);
 		i += 1;
 	}
 	return (0);

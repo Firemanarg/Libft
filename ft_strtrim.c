@@ -6,7 +6,7 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:13:07 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/20 08:44:06 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/24 13:34:35 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static size_t	ft_find_start(char const *s1, char const *set)
 	s1_len = ft_strlen(s1);
 	while (i < s1_len)
 	{
-		if (!ft_strchr(set, *(s1 + i)))
+		if (!ft_strchr(set, s1[i]))
 			return (i);
 		i += 1;
 	}
@@ -35,7 +35,7 @@ static size_t	ft_find_end(char const *s1, char const *set)
 	i = ft_strlen(s1) - 1;
 	while (i > 0)
 	{
-		if (!ft_strchr(set, *(s1 + i)))
+		if (!ft_strchr(set, s1[i]))
 			return (i);
 		i -= 1;
 	}
