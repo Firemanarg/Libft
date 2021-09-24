@@ -6,7 +6,7 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:14:07 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/24 13:22:38 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/24 13:36:34 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	size_t	byte;
+	size_t			byte;
 	unsigned char	uc;
 	unsigned char	*ucs;
 
