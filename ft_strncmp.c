@@ -6,7 +6,7 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:13:20 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/24 13:32:20 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/24 13:38:09 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	i = 0;
 	if (n == 0)
 		return (0);
-	while (ucs1[i] && (ucs[i] == ucs2[i]) && (i < n - 1))
+	while (ucs1[i] && (ucs1[i] == ucs2[i]) && (i < n - 1))
 		i += 1;
 	return (ucs1[i] - ucs2[i]);
 }
