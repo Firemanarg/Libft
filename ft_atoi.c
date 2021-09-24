@@ -6,7 +6,7 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:14:59 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/19 11:15:00 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/24 12:20:58 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,24 +18,11 @@ static int	ft_is_whitespace(char c)
 		|| c == '\r' || c == '\t' || c == '\v');
 }
 
-static void	ft_skip_whitespaces(size_t *i, const char *nptr)
+static size_t	ft_skip_whitespaces(size_t i, const char *nptr)
 {
-	while (ft_is_whitespace(*(nptr + *i)))
-		*i += 1;
-}
-
-static int	ft_get_signal(size_t *i, char c)
-{
-	int	signal;
-
-	signal = 1;
-	if (c == '-' || c == '+')
-	{
-		if (c == '-')
-			signal = -1;
-		*i += 1;
-	}
-	return (signal);
+	while (ft_is_whitespace(nptr[i]))
+		i += 1;
+	return (i);
 }
 
 int	ft_atoi(const char *nptr)
@@ -46,11 +33,17 @@ int	ft_atoi(const char *nptr)
 
 	i = 0;
 	nbr = 0;
-	ft_skip_whitespaces(&i, nptr);
-	signal = ft_get_signal(&i, *(nptr + i));
-	while (ft_isdigit(*(nptr + i)))
+	i = ft_skip_whitespaces(i, nptr);
+	signal = 1;
+	if (nptr[i] == '-' || nptr[i] == '+')
 	{
-		nbr = (nbr * 10) + (*(nptr + i) - '0');
+		if (nptr[i] == '-')
+			signal = -1;
+		i += 1;
+	}
+	while (ft_isdigit(nptr[i]))
+	{
+		nbr = (nbr * 10) + (nptr[i] - '0');
 		i += 1;
 	}
 	nbr *= signal;
