@@ -6,17 +6,43 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:14:59 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/24 12:20:58 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/24 12:34:41 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+
+/*
+**	Function name:
+**		> ft_is_whitespace
+**	Parameters:
+**		> c (char) : Character to be checked
+**	Description:
+**		> Check if parameter c is a space, considering the followings characters
+**			as whitespaces -> " \f\n\r\t\v"
+**	Return:
+**		> (int). Return 1 if c is whitespace, or 0 if not
+*/
 
 static int	ft_is_whitespace(char c)
 {
 	return (c == ' ' || c == '\f' || c == '\n'
 		|| c == '\r' || c == '\t' || c == '\v');
 }
+
+/*
+**	Function name:
+**		> ft_skip_whitespaces
+**	Parameters:
+**		> i (size_t) : Start index
+**		> nptr (const char *) : String to be converted to integer
+**	Description:
+**		> Skips whitespaces, starting at position i and returning when
+**			non-whitespace character is found
+**	Return:
+**		> (size_t). Index of first non-whitespace character found.
+*/
 
 static size_t	ft_skip_whitespaces(size_t i, const char *nptr)
 {
