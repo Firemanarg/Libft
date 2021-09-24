@@ -6,7 +6,7 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:13:52 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/24 12:02:11 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/24 12:09:05 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ static void	complement_split(char const *s, char c, char **arr)
 		}
 	}
 }
+*/
 
 static size_t	word_count(char const *s, char c)
 {
@@ -73,7 +74,7 @@ static size_t	word_count(char const *s, char c)
 			i += 1;
 	}
 	return (count);
-}*/
+}
 
 static void	freeall(char **array, size_t curr_index)
 {
