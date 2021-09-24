@@ -6,7 +6,7 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:13:11 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/24 13:33:55 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/24 13:39:56 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strrchr(const char *s, int c)
 	{
 		if (*cs == cc)
 			last = cs;
-		s++;
+		cs++;
 	}
 	if (cc == '\0')
 		last = cs;
