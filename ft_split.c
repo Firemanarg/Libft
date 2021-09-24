@@ -6,7 +6,7 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:13:52 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/24 12:10:10 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/24 12:54:59 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static void	freeall(char **array, size_t curr_index)
 {
 	while (curr_index > 0)
 	{
-		free(*(array + curr_index));
+		free(array[curr_index]);
 		curr_index -= 1;
 	}
 	free(array[0]);
