@@ -6,11 +6,23 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:13:52 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/24 12:54:59 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/25 11:22:03 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+**	Function name:
+**		> word_count
+**	Parameters:
+**		> s (char const *) : String to be word counted.
+**		> c (char) : Separator character.
+**	Description:
+**		> Count how many non-empty words the string s has, based on separator c.
+**	Return:
+**		> (size_t). Return the count of non-empty words inside the string.
+*/
 
 static size_t	word_count(char const *s, char c)
 {
@@ -33,6 +45,19 @@ static size_t	word_count(char const *s, char c)
 	return (count);
 }
 
+/*
+**	Function name:
+**		> freeall
+**	Parameters:
+**		> array (char **) : Array to be freed.
+**		> curr_index (size_t) : Current index of array
+**	Description:
+**		> Free all allocated strings in array, to prevent memory leaks.
+**		> This function must be called only in case of error.
+**	Return:
+**		> (void).
+*/
+
 static void	freeall(char **array, size_t curr_index)
 {
 	while (curr_index > 0)
@@ -43,6 +68,20 @@ static void	freeall(char **array, size_t curr_index)
 	free(array[0]);
 	free(array);
 }
+
+/*
+**	Function name:
+**		> fill_array
+**	Parameters:
+**		> s (char const *) : String containing the expected words to fill array.
+**		> c (char) : Separator character.
+**		> array (char **) : Array to be filled.
+**	Description:
+**		> Slice string s, considering separator c, then add the words to each
+**			position of array.
+**	Return:
+**		> (char **). Return the filled array.
+*/
 
 static char	**fill_array(char const *s, char c, char **array)
 {
