@@ -6,7 +6,7 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:13:28 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/24 13:47:03 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/25 10:26:55 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 size_t	ft_strlen(const char *str)
 {
-	char	*s;
+	const char	*s;
 
-	s = (char *) str;
+	s = str;
 	while (*s)
 		s++;
 	return (s - str);
