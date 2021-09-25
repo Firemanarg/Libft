@@ -6,7 +6,7 @@
 #    By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/19 11:12:35 by lsilva-q          #+#    #+#              #
-#    Updated: 2021/09/22 16:34:17 by lsilva-q         ###   ########.fr        #
+#    Updated: 2021/09/25 11:30:14 by lsilva-q         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
 $(OBJS): $(SRCS)
-	$(CC) -c $(SRCS)
+	$(CC) $(CFLAGS) -c $(SRCS)
 
 bonus: $(OBJS) $(B_OBJS)
 	$(AR) $(NAME) $(OBJS) $(B_OBJS)
