@@ -6,7 +6,7 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 11:14:39 by lsilva-q          #+#    #+#             */
-/*   Updated: 2021/09/22 13:44:19 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2021/09/25 11:37:10 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,13 +51,12 @@ char	*ft_itoa(int n)
 	str[len--] = '\0';
 	if (n == 0)
 		str[0] = '0';
-	else if (n < 0)
+	nbr = n;
+	if (n < 0)
 	{
 		str[0] = '-';
 		nbr = n * (-1);
 	}
-	else
-		nbr = n;
 	while (nbr > 0)
 	{
 		str[len] = (nbr % 10) + '0';
