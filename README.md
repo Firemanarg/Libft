@@ -6,5 +6,39 @@
 
 
 <h1 align="center"> ⚙️ Implemented Functions ⚙️ </h1>
-
-<h3 align="center"> Functions from &lt;ctype.h&gt; Library </h3>
+<h3 align="center"> Functions by Library </h3>
+<table border="0" align="center">
+  <tr>
+    <td><h3 align="center"> &lt;ctype.h&gt; </h3></td>
+    <td><h3 align="center"> &lt;string.h&gt; </h3></td>
+    <td><h3 align="center"> &lt;strings.h&gt; </h3></td>
+    <td><h3 align="center"> &lt;stdlib.h&gt; </h3></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/Firemanarg/Libft/blob/main/ft_isascii.c">ft_isascii</a> - Checks for an alphabetic character</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/Firemanarg/Libft/blob/main/ft_isalnum.c">ft_isalnum</a> - alphanumeric character test</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/Firemanarg/Libft/blob/main/ft_isalpha.c">ft_isalpha</a> - alphabetic character test</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/Firemanarg/Libft/blob/main/ft_islower.c">ft_islower</a> - lower-case character test</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/Firemanarg/Libft/blob/main/ft_isupper.c">ft_isupper</a> - upper-case character test</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/Firemanarg/Libft/blob/main/ft_isdigit.c">ft_isdigit</a> - decimal-digit character test</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/Firemanarg/Libft/blob/main/ft_isprint.c">ft_isprint</a> - printing character test (space character inclusive)</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/Firemanarg/Libft/blob/main/ft_tolower.c">ft_tolower</a> - upper case to lower case letter conversion</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/Firemanarg/Libft/blob/main/ft_toupper.c">ft_toupper</a> - lower case to upper case letter conversion</td>
+  </tr>
+</table>
