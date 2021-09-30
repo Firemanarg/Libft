@@ -7,4 +7,4 @@
 
 <h1 align="center"> ⚙️ Implemented Functions ⚙️ </h1>
 
-<h3> Functions from &lt;ctype.h&gt; Library </h3>
+<h3 align="center"> Functions from &lt;ctype.h&gt; Library </h3>
