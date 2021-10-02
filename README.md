@@ -18,8 +18,6 @@
         <li><a href="https://github.com/Firemanarg/Libft/blob/main/ft_isascii.c">ft_isascii</a> - Checks for an alphabetic character</li>
         <li><a href="https://github.com/Firemanarg/Libft/blob/main/ft_isalnum.c">ft_isalnum</a> - alphanumeric character test</li>
         <li><a href="https://github.com/Firemanarg/Libft/blob/main/ft_isalpha.c">ft_isalpha</a> - alphabetic character test</li>
-        <li><a href="https://github.com/Firemanarg/Libft/blob/main/ft_islower.c">ft_islower</a> - lower-case character test</li>
-        <li><a href="https://github.com/Firemanarg/Libft/blob/main/ft_isupper.c">ft_isupper</a> - upper-case character test</li>
         <li><a href="https://github.com/Firemanarg/Libft/blob/main/ft_isdigit.c">ft_isdigit</a> - decimal-digit character test</li>
         <li><a href="https://github.com/Firemanarg/Libft/blob/main/ft_isprint.c">ft_isprint</a> - printing character test (space character inclusive)</li>
         <li><a href="https://github.com/Firemanarg/Libft/blob/main/ft_tolower.c">ft_tolower</a> - upper case to lower case letter conversion</li>
