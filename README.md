@@ -48,17 +48,10 @@
         <li><a href="https://github.com/Firemanarg/Libft/blob/main/ft_strlen.c">ft_strlen</a> - find length of string</li>
         <li><a href="https://github.com/Firemanarg/Libft/blob/main/ft_strchr.c">ft_strchr</a> - locate character in string (first occurrence)</li>
         <li><a href="https://github.com/Firemanarg/Libft/blob/main/ft_strrchr.c">ft_strrchr</a> - locate character in string (last occurence)</li>
-        <li><a href="https://github.com/Firemanarg/Libft/blob/main/ft_strstr.c">ft_strstr</a> - locate a substring in a string</li>
         <li><a href="https://github.com/Firemanarg/Libft/blob/main/ft_strnstr.c">ft_strnstr</a> - locate a substring in a string (size-bounded)</li>
-        <li><a href="https://github.com/Firemanarg/Libft/blob/main/ft_strcmp.c">ft_strcmp</a> - compare strings</li>
         <li><a href="https://github.com/Firemanarg/Libft/blob/main/ft_strncmp.c">ft_strncmp</a> - compare strings (size-bounded)</li>
-        <li><a href="https://github.com/Firemanarg/Libft/blob/main/ft_strnrcmp.c">ft_strnrcmp</a> - reversely compare strings (size-bounded)</li>
-        <li><a href="https://github.com/Firemanarg/Libft/blob/main/ft_strcpy.c">ft_strcpy</a> - copy strings</li>
-        <li><a href="https://github.com/Firemanarg/Libft/blob/main/ft_strncpy.c">ft_strncpy</a> - copy strings (size-bounded)</li>
+        <li><a href="https://github.com/Firemanarg/Libft/blob/main/ft_strlcpy.c">ft_strlcpy</a> - copy strings (size-bounded)</li>
         <li><a href="https://github.com/Firemanarg/Libft/blob/main/ft_strdup.c">ft_strdup</a> - save a copy of a string (with malloc)</li>
-        <li><a href="https://github.com/Firemanarg/Libft/blob/main/ft_strndup.c">ft_strndup</a> - save a copy of a string (with malloc, size-bounded)</li>
-        <li><a href="https://github.com/Firemanarg/Libft/blob/main/ft_strcat.c">ft_strcat</a> - concatenate strings (s2 into s1)</li>
-        <li><a href="https://github.com/Firemanarg/Libft/blob/main/ft_strncat.c">ft_strncat</a> - concatenate strings (s2 into s1, size-bounded)</li>
         <li><a href="https://github.com/Firemanarg/Libft/blob/main/ft_strlcpy.c">ft_strlcpy</a> - size-bounded string copying</li>
         <li><a href="https://github.com/Firemanarg/Libft/blob/main/ft_strlcat.c">ft_strlcat</a> - size-bounded string concatenation</li>
       </ul>
